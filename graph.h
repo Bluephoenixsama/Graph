@@ -5,6 +5,7 @@
 
 struct vertex
 {
+
     char c;
     int index;
 };
@@ -20,7 +21,6 @@ public:
     {
         numVertices = 0;
     }
-    ~Graph();
     Graph(int numVertices)
     {
         this->numVertices = numVertices;
@@ -38,7 +38,7 @@ public:
     void addEdge(vertex vertex1, vertex vertex2);
     void removeVertex(vertex vertexToRemove);
     void removeEdge(vertex vertex1, vertex vertex2);
-    int numVertices();
+    int NumVertices();
 };
 
 #endif
