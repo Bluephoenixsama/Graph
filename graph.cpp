@@ -141,3 +141,5 @@ bool Graph::neighbour(vertex vertex1, vertex vertex2)
 {
     return adjMatrix[vertex1.index][vertex2.index];
 }
+
+// idasojdaspjdpas//
