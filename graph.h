@@ -39,6 +39,13 @@ public:
     void removeVertex(vertex vertexToRemove);
     void removeEdge(vertex vertex1, vertex vertex2);
     int NumVertices();
-};
+
+    int numEdges();
+    int indegree(vertex);
+    int outdegree(vertex);
+    int degree(vertex);
+    vector neighbors(vertex);
+    bool neighbour(vertex vertex1, vertex vertex2);
+}
 
 #endif

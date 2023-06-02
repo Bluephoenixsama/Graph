@@ -64,3 +64,80 @@ int Graph::NumVertices()
 
     return numVertices;
 }
+
+int Graph::numEdges()
+{
+    int count = 0;
+    for (int i = 0; i < numVertices; i++)
+    {
+        for (int j = 0; j < numVertices; j++)
+        {
+            if (adjMatrix[i][j])
+            {
+                count++;
+            }
+        }
+    }
+    if (!isDirected())
+    {
+        count /= 2;
+    }
+    return count;
+}
+
+int Graph::indegree(vertex v)
+{
+    int indegreeCount = 0;
+    for (int i = 0; i < numVertices; i++)
+    {
+        if (adjMatrix[i][v.index])
+        {
+            indegreeCount++;
+        }
+    }
+    return indegreeCount;
+}
+
+int Graph::outdegree(vertex v)
+{
+    int outdegreeCount = 0;
+    for (int i = 0; i < numVertices; i++)
+    {
+        if (adjMatrix[v.index][i])
+        {
+            outdegreeCount++;
+        }
+    }
+    return outdegreeCount;
+}
+
+int Graph::degree(vertex v)
+{
+    int degreeCount = 0;
+    for (int i = 0; i < numVertices; i++)
+    {
+        if (adjMatrix[v.index][i] || adjMatrix[i][v.index])
+        {
+            degreeCount++;
+        }
+    }
+    return degreeCount;
+}
+
+std::vector<vertex> Graph::neighbors(vertex v)
+{
+    std::vector<vertex> neighborVertices;
+    for (int i = 0; i < numVertices; i++)
+    {
+        if (adjMatrix[v.index][i])
+        {
+            neighborVertices.push_back(vertexList[i]);
+        }
+    }
+    return neighborVertices;
+}
+
+bool Graph::neighbour(vertex vertex1, vertex vertex2)
+{
+    return adjMatrix[vertex1.index][vertex2.index];
+}
