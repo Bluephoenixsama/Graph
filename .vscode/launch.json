@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "c:/Users/User/Desktop/graph",
-      "program": "c:/Users/User/Desktop/graph/build/Debug/outDebug",
+      "cwd": "c:/Users/User/Desktop/LAB 5",
+      "program": "c:/Users/User/Desktop/LAB 5/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
