@@ -1,7 +1,10 @@
 #include <iostream>
 #include <stdio.h>
 #include <string>
+#include <vector>
 #include "graph.h"
+
+using namespace std;
 
 bool Graph::isEmpty()
 {
@@ -124,14 +127,17 @@ int Graph::degree(vertex v)
     return degreeCount;
 }
 
-std::vector<vertex> Graph::neighbors(vertex v)
+vector<vertex> Graph::neighbors(vertex v)
 {
-    std::vector<vertex> neighborVertices;
+    vector<vertex> neighborVertices;
     for (int i = 0; i < numVertices; i++)
     {
         if (adjMatrix[v.index][i])
         {
-            neighborVertices.push_back(vertexList[i]);
+            vertex neighbor;
+            neighbor.c = 'A' + i;
+            neighbor.index = i;
+            neighborVertices.push_back(neighbor);
         }
     }
     return neighborVertices;
@@ -141,5 +147,3 @@ bool Graph::neighbour(vertex vertex1, vertex vertex2)
 {
     return adjMatrix[vertex1.index][vertex2.index];
 }
-
-// idasojdaspjdpas//

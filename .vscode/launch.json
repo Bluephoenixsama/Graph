@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "c:/Users/User/Desktop/CE2021_Lab4_03_04",
-      "program": "c:/Users/User/Desktop/CE2021_Lab4_03_04/build/Debug/outDebug",
+      "cwd": "c:/Users/User/Desktop/graph",
+      "program": "c:/Users/User/Desktop/graph/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [

@@ -1,8 +1,9 @@
 #include <stdio.h>
+#include <vector>
 #ifndef graph_h
 #define graph_h
 #include <iostream>
-
+using namespace std;
 struct vertex
 {
 
@@ -44,8 +45,8 @@ public:
     int indegree(vertex);
     int outdegree(vertex);
     int degree(vertex);
-    vector neighbors(vertex);
+    vector<vertex> neighbors(vertex);
     bool neighbour(vertex vertex1, vertex vertex2);
-}
+};
 
 #endif
